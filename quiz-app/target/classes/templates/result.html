@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result - Quiz App</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="card">
+    <h1>Quiz Result</h1>
+    <p class="result-name">Participant: <b th:text="${participantName}">Name</b></p>
+
+    <table class="result-table">
+        <tr><td>Total Questions</td><td th:text="${total}">10</td></tr>
+        <tr><td>Correct Answers</td><td th:text="${correct}">7</td></tr>
+        <tr><td>Incorrect Answers</td><td th:text="${incorrect}">3</td></tr>
+        <tr><td>Score</td><td th:text="${correct} + ' / ' + ${total}">7 / 10</td></tr>
+        <tr><td>Percentage</td><td th:text="${percentage} + '%'">70%</td></tr>
+    </table>
+
+    <a class="button" th:href="@{/quiz/start}">Restart Quiz</a>
+    <a class="button button-secondary" th:href="@{/home}">Back to Home</a>
+</div>
+</body>
+</html>

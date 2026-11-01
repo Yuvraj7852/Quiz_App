@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf2fb;
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #1a56b0;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #b0c4de;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button, .button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #1a56b0;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+button:hover, .button:hover {
+    background-color: #144390;
+}
+
+.error {
+    background-color: #fdecea;
+    color: #b71c1c;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.link-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ---- Quiz page ---- */
+.progress {
+    color: #1a56b0;
+    font-weight: bold;
+}
+
+.option {
+    display: block;
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid #b0c4de;
+    border-radius: 5px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #eaf2fb;
+}
+
+.option input[type="radio"] {
+    width: auto;
+    margin: 0 10px 0 0;
+}
+
+/* ---- Result page ---- */
+.result-name {
+    text-align: center;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.result-table td {
+    padding: 10px;
+    border-bottom: 1px solid #dde6f3;
+}
+
+.result-table td:last-child {
+    text-align: right;
+    font-weight: bold;
+}
+
+.button-secondary {
+    background-color: #6c8ebf;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Quiz App</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="card">
+    <h1>Login</h1>
+
+    <p class="success" th:if="${success != null}" th:text="${success}">Success message</p>
+    <p class="error" th:if="${error != null}" th:text="${error}">Error message</p>
+
+    <form th:action="@{/login}" method="post">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"
+               th:value="${email}" placeholder="Enter your email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password"
+               placeholder="Enter your password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p class="link-text">New here? <a th:href="@{/signup}">Create an account</a></p>
+</div>
+</body>
+</html>

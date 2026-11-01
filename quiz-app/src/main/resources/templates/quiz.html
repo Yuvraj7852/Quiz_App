@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Quiz App</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="card">
+    <p class="progress">
+        Question <span th:text="${questionNumber}">1</span>
+        of <span th:text="${totalQuestions}">10</span>
+    </p>
+
+    <p class="error" th:if="${error != null}" th:text="${error}">Error message</p>
+
+    <h2 th:text="${question.questionText}">Question text</h2>
+
+    <form th:action="@{/quiz/answer}" method="post">
+        <label class="option">
+            <input type="radio" name="selectedOption" value="A">
+            <span th:text="${question.optionA}">Option A</span>
+        </label>
+        <label class="option">
+            <input type="radio" name="selectedOption" value="B">
+            <span th:text="${question.optionB}">Option B</span>
+        </label>
+        <label class="option">
+            <input type="radio" name="selectedOption" value="C">
+            <span th:text="${question.optionC}">Option C</span>
+        </label>
+        <label class="option">
+            <input type="radio" name="selectedOption" value="D">
+            <span th:text="${question.optionD}">Option D</span>
+        </label>
+
+        <button type="submit"
+                th:text="${questionNumber == totalQuestions} ? 'Finish Quiz' : 'Next Question'">
+            Next Question
+        </button>
+    </form>
+</div>
+</body>
+</html>
